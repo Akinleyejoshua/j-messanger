@@ -1,0 +1,115 @@
+main {
+    font-family: monospace;
+}
+
+*:hover {
+    outline: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 8rem;
+    margin-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.02rem;
+}
+
+input {
+    border: none;
+    margin-bottom: 1.5rem;
+    padding: .2rem;
+    font-family: monospace;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+input:hover {
+    border-bottom: none;
+}
+
+button {
+    background: none;
+    border: 2px solid whitesmoke;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+}
+
+button:last-child{
+    /* background: linear-gradient(to right, rgba(0, 128, 0, 0.514), rgb(98, 194, 226)); */
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.6), rgba(255, 0, 0, 0.6));
+}
+
+button:hover:last-child{
+    background: none;
+    border: 2px solid whitesmoke;
+    color: rgba(0, 0, 0, 0.493);
+}
+
+button:hover {
+    background: whitesmoke;
+}
+
+#modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    display: none;
+}
+
+.modal-body{
+    align-self: center;
+    height: 15rem;
+    width: 15rem;
+    background: white;
+    text-align: center;
+    border-radius: .2rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.modal-body .fa-info-circle{
+    font-size: 3rem;
+    color: royalblue;
+}
+
+.modal-body .info {
+    font-family: monospace;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 740px) {
+    form {
+        margin: 10rem 10rem;
+        text-align: center;
+    }
+
+    input {
+        align-self: center;
+        width: 20rem;
+    }
+
+    button {
+        width: 10rem;
+        align-self: center;
+    }
+}

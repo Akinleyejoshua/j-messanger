@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messanger | Home</title>
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+        <header>
+            <div>
+                <img class="user-pic" src="../assets/img/logo.jpg">
+                <h2 id="section">Chats</h2>
+            </div>
+            <div>
+                <button class="fa fa-camera"></button>
+                <button class="fa fa-pencil"></button>
+            </div>
+        </header>
+    <!-- header -->
+
+    <!-- menu bar -->
+    <section class="side-bar">
+        <header>
+            <button class="fa fa-arrow-left menu-back"></button>
+            <h2>Me</h2>
+        </header>
+        <main>
+            <div class="img">
+                <img src="../assets/img/logo.jpg">
+            <h2 class="username"></h2>    
+            </div>
+
+            <button onclick="darkmode();">
+                <span class="fa fa-cloud" style="background: black; color: white;"></span>
+                <p>Dark mode</p>
+            </button>
+            
+            <h4>Account</h4>
+            <button>
+                <span class="fa fa-gear" style="color: white; background: royalblue;"></span>
+                <p>Profile Settings</p>
+            </button>
+        </main>
+        
+    </section>
+    
+
+    <main>
+        <section id="chats" class="tab-page">
+            <div class="search-bar">
+                <button class="fa fa-search"></button>
+                <input type="text" id="search" placeholder="Search">
+            </div>
+
+            <div class="active-section">
+                <div class="active-users">
+                    <!-- <div class="users">
+                        <div class="img">
+                            <img src="../assets/img/photo1.jpg">
+                            <div class="status"></div>
+                        </div>
+                        <p>Joshua</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="messages">
+                <button class="msg" onclick="openChatRoom()">
+                    <div class="img">
+                        <img src="../assets/img/logo.jpg">
+                    </div>
+                    <div class="chat-header">
+                        <div class="name">PUBLIC GROUP</div>
+                        <div class="last-msg"></div>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section id="people" class="tab-page">
+            
+        </section>
+
+        <section class="chatroom">
+            <header>
+                <button class="fa fa-arrow-left"></button>
+                <img src="../assets/img/logo.jpg">
+                <h3>PUBLIC GROUP</h3>
+            </header>
+            <main>
+                <div class="thread">
+                </div>
+            <div class="bottom-space"></div>
+
+            </main>
+            <footer>
+                <form method="dialog">
+                    <input type="text" id="msg-value" placeholder="Aa">
+                    <button class="fa fa-send send-msg"></button>
+                </form>
+            </footer>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="openTab(event, 'chats', 'Chats')">
+            <div class="fa fa-comments"></div>
+            <p>Chats</p>
+        </button>
+        <button onclick="openTab(event, 'people', 'People')">
+            <div class="fa fa-users"></div>
+            <p>People</p>
+        </button>
+    </footer>
+
+    <!-- Scripts  -->
+    <script src="../assets/firebase/firebase-app.js"></script>
+    <script src="../assets/firebase/firebase-analytics.js"></script>
+    <script src="../assets/firebase/firebase-auth.js"></script>
+    <script src="../assets/firebase/firebase-database.js"></script>
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/js/home.js"></script>
+</body>
+
+</html>
